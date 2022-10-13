@@ -1,0 +1,188 @@
+body{
+    background: #438a43;
+}
+#vacio{
+    color: white;
+}
+#vaciodos{
+    color: white;
+}
+
+#tabla{
+    background: white;
+    width: 100%;
+}
+
+#bienvenido{
+    font-family: 'Nunito', sans-serif;
+    color: darkgreen;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+#titulo{
+    font-family: 'Nunito', sans-serif;
+    color: darkgreen;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+#frase{
+    color: rgb(128, 128, 128);
+    padding-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#adminmesa{
+    border-radius: 7px;
+    color: white;
+    background: green;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-right: 1em;
+    margin-left: 2em;
+    font-weight: bold;
+}
+#adminmesa2{
+    color: white;
+}
+
+#crearmesa{
+    border-radius: 7px;
+    color: white;
+    background: green;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-right: 1em;
+    margin-left: 1em;
+    font-weight: bold;
+}
+#crearmesa2{
+    color: white;
+}
+
+#añadircultivo{
+    border-radius: 7px;
+    color: white;
+    background: green;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-right: 1em;
+    margin-left: 1em;
+    font-weight: bold;
+}
+#añadircultivo2{
+    color: white;
+}
+
+#informacion{
+    border-radius: 7px;
+    color: white;
+    background: green;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-right: 2.5em;
+    margin-left: 1em;
+    font-weight: bold;
+}
+#informacion2{
+    color: white;
+}
+
+#bienvenido2{
+    font-family: 'Nunito', sans-serif;
+    color: darkgreen;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+#titulo2{
+    font-family: 'Nunito', sans-serif;
+    font: oblique bold 120% cursive;
+    color: darkgreen;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+#frase2{
+    color: rgb(128, 128, 128);
+    padding-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#logoico{
+    margin-right: 6em;
+    margin-left: 0px;
+}
+
+#administrarmesa{
+    font-family: 'Nunito', sans-serif;
+    font: oblique bold 120% cursive;
+    color: darkgreen;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+#administrarmesasub{
+    font-family: 'Nunito', "Harlow Solid Italic";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#registrarmesa{
+    font-family: 'Nunito', sans-serif;
+    font: oblique bold 120% cursive;
+    color: darkgreen;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+#registrarmesasub{
+    font-family: 'Nunito', "Harlow Solid Italic";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#registrarcultivo{
+    font-family: 'Nunito', sans-serif;
+    font: oblique bold 120% cursive;
+    color: darkgreen;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-left: 2em;
+    font-weight: bold;
+}
+#registrarcultivosub{
+    font-family: 'Nunito', "Harlow Solid Italic";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#agregarenfermedades{
+    color: white;
+}
+#agregarplagas{
+    color: white;
+}
+#agregarcomplementos{
+    color: white;
+}
+#agregarmatenimientos{
+    color: white;
+}

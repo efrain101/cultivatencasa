@@ -1,0 +1,215 @@
+body{
+    background: #438a43;
+}
+#barra{
+    color: white;
+}
+#plagas{
+    border-radius: 7px;
+    color: white;
+    background: #438a43;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+#plagas2{
+    color: white;
+}
+#enfermedades{
+    border-radius: 7px;
+    color: white;
+    background: #438a43;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+#enfermedades2{
+    color: white;
+}
+#complementos{
+    border-radius: 7px;
+    color: white;
+    background: #438a43;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+#complementos2{
+    color: white;
+}
+#mantenimientos{
+    border-radius: 7px;
+    color: white;
+    background: #438a43;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+#mantenimientos2{
+    color: white;
+}
+#volver{
+    border-radius: 7px;
+    color: white;
+    background: #438a43;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+#volver2{
+    color: white;
+}
+
+
+#vacio{
+    color: #438a43;
+}
+#vaciodos{
+    color: #438a43;
+}
+#primero{
+    color: white;
+    padding-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+}
+#imagen{
+    margin-left: 4em;
+}
+
+#cultivosplagas{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#efectosplagas{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#prevencionesplagas{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#erradicaplagas{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#volver3{
+    border-radius: 7px;
+    color: #ffffff;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#cultivosenf{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#efectosenf{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#prevencionesenf{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#erradicaenf{
+    border-radius: 7px;
+    color: black;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+#volver4{
+    border-radius: 7px;
+    color: #ffffff;
+    background: #68dec9;
+    border-color: white;
+    font-family: Arial;
+    font-size: 18px;
+    margin-top:  1em;
+    margin-bottom:  1em;
+    font-weight: bold;
+}
+
+

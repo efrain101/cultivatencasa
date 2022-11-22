@@ -38,6 +38,7 @@
         <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
         <link rel="stylesheet" href="{{asset("css/styletemperaturas.css")}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     </head>
 
@@ -62,13 +63,54 @@
 
                     <div class="col-4" style="font-family: 'Arial Black'">
 
-                        <input type="range" min="1" max="100" step="1" name="valor_minimo" style="margin-top: 2em" oninput="this.nextElementSibling.value = this.value">
-                        <output></output>
-
+                        <input type="range" min="1" max="100" step="1" id="valor_minimo" name="valor_minimo" style="margin-top: 2em" {{--oninput="this.nextElementSibling.value = this.value"--}}>
+                        <output id="salida"></output>
                         <br>
 
-                        <input type="range" min="1" max="100" step="1" name="valor_maximo" style="margin-top: 2.5em" oninput="this.nextElementSibling.value = this.value">
-                        <output></output>
+                        <input type="range" min="1" max="100" step="1" id="valor_maximo" name="valor_maximo" style="margin-top: 2.5em" {{--oninput="this.nextElementSibling.value = this.value"--}}>
+                        <output id="salida2"></output>
+
+                        <script>
+                            //mostrar el rango menor ingresado
+                            $('#valor_minimo').on('input', function() {
+                                $('#salida').html( $(this).val())
+                            })
+
+                            //mostrar el rango mayor ingresado
+                            $('#valor_maximo').on('input', function() {
+                                $('#salida2').html( $(this).val())
+                            })
+
+                            //verificar que el rango menor nunca sea mayor al rango mayor
+                            const $valormin = document.querySelector("#valor_minimo");
+                            const $valormax = document.querySelector("#valor_maximo");
+
+                            $valormin.addEventListener("change", function () {
+                                let vami = document.getElementById("salida").value;
+                                let vama = document.getElementById("salida2").value;
+                                if(vami>=vama)
+                                {
+                                    alert(`El valor mínimo que acabas de ingresar "${vami}" no puede ser mayor o igual que el valor máximo ingresado "${vama}"`);
+                                }
+                                else
+                                {
+                                    //alert(`Todo bien`);
+                                }
+                            });
+
+                            $valormax.addEventListener("change", function () {
+                                let vami = document.getElementById("salida").value;
+                                let vama = document.getElementById("salida2").value;
+                                if(vama<=vami)
+                                {
+                                    alert(`El valor máximo que acabas de ingresar "${vama}" no puede ser menor o igual que el valor mínimo ingresado "${vami}"`);
+                                }
+                                else
+                                {
+                                    //alert(`Todo bien`);
+                                }
+                            });
+                        </script>
 
                         <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
                             <button type="submit" class="btn btn-info" style="color: darkblue;font-family: 'Apple'"><b>Registrar</b></button>

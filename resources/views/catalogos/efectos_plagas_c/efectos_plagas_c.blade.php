@@ -19,23 +19,6 @@
         </div>
     @endif
 
-    <nav class="navbar navbar-light float-left" style="margin-top: 2em">
-        <form class="form-inline" style="display: block; mairgn: auto">
-            <table>
-                <tr>
-                    <td>
-                        <input name="buscarefecto" class="form-control mr-sm-2" type="search" placeholder="Ingresa el efecto" aria-label="Search">
-                    </td>
-
-                    <td>
-                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </nav>
-
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -58,21 +41,37 @@
         <h1 id="tituloefectospla" style="text-align: center" ><MARQUEE BEHAVIOR="ALTERNATE">Añadir efecto de plagas</MARQUEE></h1>
     </div>
 
+    <nav class="navbar navbar-light float-left">
+        <form class="form-inline">
+            <table>
+                <tr>
+                    <td>
+                        <input name="buscarefecto" class="form-control mr-sm-2" type="search" placeholder="Ingresa el efecto" aria-label="Search">
+                    </td>
+
+                    <td>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </nav>
+
 
     <div class="container">
         <form id="formuefectospla" action="{{url("efectos_plagas_c")}}" method="post" >
             @csrf
             <div class="container">
                 <div class="row" >
-                    <div class="col-3" style="color: blue;font-family: 'Arial Black'">
+                    <div class="col-3" style="color: blue;font-family: 'Arial Black'; margin-top: 1em">
                         <div>
                             <label>Efecto</label>
                         </div>
                     </div>
 
-                    <div class="col-4" style="font-family: 'Arial Black'">
+                    <div style="font-family: 'Arial Black'">
                         <input type="text"  name="efecto" class="form-control" placeholder="efecto">
-                        <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
+                        <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em; width: 100%; height: 30%">
                             <button type="submit" class="btn btn-info" style="color: darkblue;font-family: 'Apple'"><b>Registrar</b></button>
                         </div>
                     </div>

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ambientes;
-use App\Models\Cultivos2;
+use App\Models\Ambiente;
+use App\Models\Cultivo2;
 use Illuminate\Http\Request;
 
 class ambienteController extends Controller
@@ -16,7 +16,7 @@ class ambienteController extends Controller
     public function index(Request $request)
     {
         $tipo = $request->get('buscarpor');
-        $ambientes = Ambientes::where('tipo','like',"%$tipo%")->Paginate(100000000000);
+        $ambientes = Ambiente::where('tipo','like',"%$tipo%")->Paginate(100000000000);
 
         return view("catalogos/ambientes.index",compact('ambientes'));
     }
@@ -43,7 +43,7 @@ class ambienteController extends Controller
             'tipo' => 'required',
             'especificacion' => 'required',
         ]);
-        Ambientes::create($request->all());
+        Ambiente::create($request->all());
         return redirect()->route('ambientes.index')
             ->with('success', 'El ambiente se registro correctamente');
     }
@@ -51,10 +51,10 @@ class ambienteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Cultivos  $cultivos
+     * @param  \App\Models\Cultivo  $cultivos
      * @return \Illuminate\Http\Response
      */
-    public function show(Ambientes $ambiente)
+    public function show(Ambiente $ambiente)
     {
         //
     }
@@ -62,10 +62,10 @@ class ambienteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Cultivos  $cultivos
+     * @param  \App\Models\Cultivo  $cultivos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ambientes $ambiente)
+    public function edit(Ambiente $ambiente)
     {
         return view("catalogos/ambientes.edit",compact("ambiente"));
     }
@@ -74,10 +74,10 @@ class ambienteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Cultivos  $cultivos
+     * @param  \App\Models\Cultivo  $cultivos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ambientes $ambiente)
+    public function update(Request $request, Ambiente $ambiente)
     {
         $request->validate([
             'tipo' => 'required',
@@ -91,10 +91,10 @@ class ambienteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Cultivos  $cultivos
+     * @param  \App\Models\Cultivo  $cultivos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ambientes $ambiente)
+    public function destroy(Ambiente $ambiente)
     {
         $ambiente->delete();
         return redirect()->route("ambientes.index")->with("success","Ambiente eliminado corectamente");

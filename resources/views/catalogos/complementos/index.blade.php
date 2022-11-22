@@ -78,14 +78,14 @@
                                     <form action="{{url("complementos", $complemento->id_complemento)}}" method="POST">
                                         @csrf
                                         @method("DELETE")
-                                        <button class="button" style="background: black; border-radius: 5px">
+                                        <button class="button" style=" border-radius: 5px">
                                             <i class="bi-trash-fill" style="font-size: 1.4rem; color: red"></i>
                                         </button>
                                     </form>
                                 </td>
                                 <td>
                                     <a class="button" href="{{url("complementos",$complemento->id_complemento)."/edit"}}">
-                                        <i class="bi-pencil-fill" style="font-size: 1.7rem; color: yellow; background: black; border-radius: 5px"></i>
+                                        <i class="bi-pencil-fill" style="font-size: 1.7rem; color: yellow; border-radius: 5px"></i>
                                     </a>
                                 </td>
                             </tr>

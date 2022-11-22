@@ -37,7 +37,7 @@
                                         <div class="row mb-3">
                                             <label for="id_cultivo" class="col-md-4 col-form-label text-md-end">{{ __('Elige un cultivo para añadirlo a tu mesa') }}</label>
                                             <div class="col-md-6">
-                                                <select id="id_cultivo" class="form-control @error('id_cultivo') is-invalid @enderror" name="id_cultivo" {{--onchange="ShowSelected();"--}}>
+                                                <select id="id_cultivo" class="form-control @error('id_cultivo') is-invalid @enderror" name="id_cultivo" required {{--onchange="ShowSelected();"--}}>
                                                     @foreach($cultivos as $cultivo)
                                                         <option value="{{$cultivo['id_cultivo']}}">{{$cultivo['nombre']}}</option>
                                                     @endforeach
@@ -67,7 +67,7 @@
                                         <div class="row mb-3">
                                             <label for="tamaño" class="col-md-4 col-form-label text-md-end">{{ __('Tamaño') }}</label>
                                             <div class="col-md-6">
-                                                <select id="id_tamaño" class="form-control @error('id_tamaño') is-invalid @enderror" name="id_tamaño">
+                                                <select id="id_tamaño" class="form-control @error('id_tamaño') is-invalid @enderror" name="id_tamaño" required>
                                                     @foreach($tamaños as $tamaño)
                                                         <option value="{{$tamaño['id_tamaño']}}">{{$tamaño['tamaño']}}</option>
                                                     @endforeach
@@ -78,7 +78,7 @@
                                         <div class="row mb-3">
                                             <label for="fecha_siembra" class="col-md-4 col-form-label text-md-end">{{ __('Fecha de siembra') }}</label>
                                             <div class="col-md-6">
-                                                <input id="fecha_siembra" type="date" class="form-control " name="fecha_siembra" {{--value="{{$fechaactual->format('Y-m-d')}}" readonly--}}>
+                                                <input id="fecha_siembra" type="date" class="form-control " name="fecha_siembra" required{{--value="{{$fechaactual->format('Y-m-d')}}" readonly--}}>
                                             </div>
                                         </div>
 
@@ -128,8 +128,9 @@
 
 <div style="float: right; width: 50%">
     <h6 style="color: white" align="center; font-family: 'Baskerville Old Face';">Estos son algunas sugerencias de cultivos que puedes sembrar en la temporada actual</h6>
-    <table style="color: black; font-family: 'Baskerville Old Face'; font-size: 15px; background: #FFD966; width: 90%">
-        <tr >
+    {{----}}
+    <table style="color: black; font-family: 'Baskerville Old Face'; font-size: 15px; width: 90%">
+        <tr style="background: white">
             <th>Cultivo:</th>
             <th>Ambiente:</th>
             <th>Tipo de siembra:</th>
@@ -139,11 +140,11 @@
             <th>Peridodo de crecimiento:</th>
         </tr>
         @foreach($cultivos_actuales as $cultivos_actuale)
-            <tr>
-                <td>
+            <tr style="background: #FFD966">
+                <th>
                     {{$cultivos_actuale->culnom}}
                     <img src="{{asset($cultivos_actuale->imagen)}}" style=" width: 70px; height: 70px; display: block; mairgn: auto">
-                </td>
+                </th>
                 <td>
                     {{$cultivos_actuale->tipo}}
                 </td>
@@ -166,8 +167,6 @@
         @endforeach
     </table>
 </div>
-
-
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

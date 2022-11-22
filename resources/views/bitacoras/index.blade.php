@@ -26,10 +26,10 @@
                 <h1 id="nombre">Bitácora de {{$datosdelpro->nombre}} </h1>
             </li>
             <li >
-                <button id="observaciones" ><a id="observaciones2" href="{{url("anotaciones")}}" style="text-decoration: none">Anotar observaciones</a></button>
+                <button id="observaciones" ><a id="observaciones2" href="{{url("anotaciones",$id_mesa_siembra)}}" style="text-decoration: none">Observaciones del cultivo</a></button>
             </li>
             <li>
-                <button id="volver" ><a id="volver2" href="{{url("mesas_siembras")}}" style="text-decoration: none">Volver</a></button>
+                <button id="volver" ><a id="volver2" href="{{url("mesas_siembras",$datosdelpro->id_mesa_cultivo)}}" style="text-decoration: none">Volver</a></button>
             </li>
         </ul>
     </div>
@@ -42,7 +42,7 @@
 
 <div >
     @foreach($anotaciones as $anotacion)
-    <table style="background: #9FC5F8;">
+    <table style="background: #9FC5F8; margin: 0 auto;">
         <tr>
             <td>
                 <a style="color: black; font-family: 'Baskerville Old Face'; font-size: 20px; background: #9FC5F8; margin: 0 auto">Anotaciones de crecimiento:</a>

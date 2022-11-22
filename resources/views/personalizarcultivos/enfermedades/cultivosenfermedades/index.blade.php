@@ -102,7 +102,7 @@
                 <td>
                     <table >
                         <tr>
-                            <th>Enfermedades</th>
+                            <th>Enfermedad</th>
                             @if(Auth::user()->tipo_usuario==1)
                             <th>Opciones</th>
                             @endif

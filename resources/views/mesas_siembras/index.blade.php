@@ -102,7 +102,7 @@
                     </div>
         {{--
                     <div>
-                        <b style="font-size: 15px; color: darkblue">Plagas:</b>
+                        <b style="font-size: 15px; color: darkblue">Plaga:</b>
                         @foreach($plagas as $plaga)
                             @if($mesas_siembra->id_plaga==$plaga->id_plaga)
                                 {{$plaga->nombre}}
@@ -111,7 +111,7 @@
                     </div>
 
                     <div>
-                        <b style="font-size: 15px; color: darkblue">Enfermedades:</b>
+                        <b style="font-size: 15px; color: darkblue">Enfermedad:</b>
                         @foreach($enfermedades as $enfermedade)
                             @if($mesas_siembra->id_enfermedad==$enfermedade->id_enfermedad)
                                 {{$enfermedad->nombre}}
@@ -120,7 +120,7 @@
                     </div>
 
                     <div>
-                        <b style="font-size: 15px; color: darkblue">Complementos:</b>
+                        <b style="font-size: 15px; color: darkblue">Complemento:</b>
                         @foreach($complementos as $complemento)
                             @if($mesas_siembra->id_complemento==$complemento->id_complemento)
                                 {{$plaga->nombre}}
@@ -129,7 +129,7 @@
                     </div>
 
                     <div>
-                        <b style="font-size: 15px; color: darkblue">Complementos:</b>
+                        <b style="font-size: 15px; color: darkblue">Complemento:</b>
                         @foreach($mantenimientos as $mantenimiento)
                             @if($mesas_siembra->id_mantenimiento==$mantenimiento->id_mantenimiento)
                                 {{$mantenimiento->descripcion}}
@@ -170,7 +170,9 @@
                         <table>
                             <tr>
                                 <td style="float: left">
-                                    <button class="btn btn-warning"><a href="{{url("bitacoras")}}" style="text-decoration: none; color: white">Bitácora</a></button>
+                                    <button class="btn btn-warning">
+                                    <a href="{{url("bitacoras",$mesas_siembra->id_mesa_siembra)}}" style="text-decoration: none; color: white">Bitácora</a>
+                                    </button>
                                 </td>
 
                                 <td style="float: right">
@@ -242,22 +244,22 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <a>Plagas:</a>
+                                                    <a>Plaga:</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <a>Enfermedades:</a>
+                                                    <a>Enfermedad:</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <a>Complementos:</a>
+                                                    <a>Complemento:</a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <a>Mantenimientos:</a>
+                                                    <a>Mantenimiento:</a>
                                                 </td>
                                             </tr>
                                         </b>
@@ -354,22 +356,22 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a>Plagas:</a>
+                                                            <a>Plaga:</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a>Enfermedades:</a>
+                                                            <a>Enfermedad:</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a>Complementos:</a>
+                                                            <a>Complemento:</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <a>Mantenimientos:</a>
+                                                            <a>Mantenimiento:</a>
                                                         </td>
                                                     </tr>
                                                 </b>

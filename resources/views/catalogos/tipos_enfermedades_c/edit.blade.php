@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
-                <a id="btnvolver" class="button" href="{{url("tipos_enfermedades_c")}}" title="Regresar"></a>
+                <a id="btnvolver" class="button" href="{{url("tipoEnfermedadc")}}" title="Regresar"></a>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="container">
-        <form action="{{url("tipos_enfermedades_c",$tipos_enfermedades_c->id_tipo_enfermedad)}}" method="POST">
+        <form action="{{url("tipoEnfermedadc",$tipos_enfermedades_c->id_tipo_enfermedad)}}" method="POST">
             @csrf
             <div class="container">
                 @method("PUT")

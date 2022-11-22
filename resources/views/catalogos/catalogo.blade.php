@@ -55,7 +55,7 @@
             @endif
             <li><a style="text-decoration: none" href="{{url("complementos")}}"><i ></i>Complementos</a></li>
             <li><a style="text-decoration: none" href="{{url("mantenimientos")}}"><i ></i>Mantenimientos</a></li>
-            <li><a style="text-decoration: none" href="{{url("tipos_enfermedades_c")}}"><i ></i>Tipos de enfermedades</a></li>
+            <li><a style="text-decoration: none" href="{{url("tipoEnfermedadc")}}"><i ></i>Tipos de enfermedades</a></li>
             <li><a style="text-decoration: none" href="{{url("enfermedades")}}"><i ></i>Enfermedades</a></li>
             <li><a style="text-decoration: none" href="{{url("efectos_enfermedades_c")}}"><i ></i>Efectos de enfermedades</a></li>
             <li><a style="text-decoration: none" href="{{url("prevencion_enfermedades_c")}}"><i ></i>Prevención de enfermedades</a></li>

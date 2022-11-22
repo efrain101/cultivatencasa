@@ -49,7 +49,7 @@
 
                 {{--<td>
                     @foreach($efectosplagas as $efectosplaga)
-                        @if($efectosplaga->id_plaga_efecto==$efectos_plagas_c->id_efecto_plaga)
+                        @if($efectosplaga->id_plaga_efecto==$efectoPlagasc->id_efecto_plaga)
                             @foreach($plagas as $plaga)
                                 @if($plaga->id_plaga==$efectosplaga->id_plaga)
                                     {{$plaga->nombre}}

@@ -45,7 +45,7 @@
 
 
     <div class="container">
-        <form id="formuefectosenf" action="{{url("efectos_enfermedades_c")}}" method="post" >
+        <form id="formuefectosenf" action="{{url("efectoEnfermedadc")}}" method="post" >
             @csrf
             <div class="container">
                 <div class="row" >
@@ -55,8 +55,8 @@
                         </div>
                     </div>
 
-                    <div class="col-4" style="font-family: 'Arial Black'">
-                        <input type="text"  name="efecto" class="form-control" placeholder="efecto">
+                    <div style="font-family: 'Arial Black'">
+                        <input type="text"  name="efecto" class="form-control" placeholder="efecto" style="width: 100%; height: 40%">
                         <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
                             <button type="submit" class="btn btn-info" style="color: darkblue;font-family: 'Apple'"><b>Registrar</b></button>
                         </div>

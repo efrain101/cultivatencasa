@@ -37,7 +37,7 @@
     </head>
 
     <div>
-        <h1 id="tituloefectosambi" style="text-align: center" ><MARQUEE BEHAVIOR="ALTERNATE">Editar efecto "{{$efectos_enfermedades_c->efecto}}" </MARQUEE></h1>
+        <h1 id="tituloefectosambi" style="text-align: center" ><MARQUEE BEHAVIOR="ALTERNATE">Editar efecto</MARQUEE></h1>
     </div>
 
     <div class="container">
@@ -52,8 +52,8 @@
                         </div>
                     </div>
 
-                    <div class="col-4" style="font-family: 'Arial Black'">
-                        <input type="text"  name="efecto" class="form-control" placeholder="efecto" value="{{$efectos_enfermedades_c->efecto}}">
+                    <div style="font-family: 'Arial Black'">
+                        <input type="text"  name="efecto" class="form-control" placeholder="efecto" style="width: 100%; height: 40%" value="{{$efectos_enfermedades_c->efecto}}">
                         <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
                             <button type="submit" class="btn btn-info" style="color: darkblue;font-family: 'Apple'"><b>Actualizar</b></button>
                         </div>

@@ -55,14 +55,14 @@
                                     <form action="{{url("prevencion_enfermedades_c", $prevencion_enfermedades_c->id_prevencion_enfermedad)}}" method="POST">
                                         @csrf
                                         @method("DELETE")
-                                        <button class="button" style="background: black; border-radius: 5px">
+                                        <button class="button" style="border-radius: 5px">
                                             <i class="bi-trash-fill" style="font-size: 1.4rem; color: red"></i>
                                         </button>
                                     </form>
                                 </td>
                                 <td>
                                     <a class="button" href="{{url("prevencion_enfermedades_c",$prevencion_enfermedades_c->id_prevencion_enfermedad)."/edit"}}">
-                                        <i class="bi-pencil-fill" style="font-size: 1.7rem; color: yellow; background: black; border-radius: 5px"></i>
+                                        <i class="bi-pencil-fill" style="font-size: 1.7rem; color: yellow; border-radius: 5px"></i>
                                     </a>
                                 </td>
                             </tr>

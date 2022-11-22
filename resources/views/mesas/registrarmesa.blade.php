@@ -68,7 +68,7 @@
                                 <label for="nombre" class="col-md-4 col-form-label text-md-end">{{ __('Elige un nombre para tu mesa') }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="text"  name="nombre" class="form-control" placeholder="Elige un nombre para tu mesa">
+                                    <input type="text"  name="nombre" class="form-control" placeholder="Elige un nombre para tu mesa" required>
                                 </div>
                             </div>
 
@@ -76,7 +76,7 @@
                                 <label for="id_sustrato" class="col-md-4 col-form-label text-md-end">{{ __('Elige un sustrato para tu mesa') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="id_sustrato" class="form-control @error('id_sustrato') is-invalid @enderror" name="id_sustrato">
+                                    <select id="id_sustrato" class="form-control @error('id_sustrato') is-invalid @enderror" name="id_sustrato" required>
                                         @foreach($sustratos as $sustrato)
                                             <option value="{{$sustrato['id_sustrato']}}">{{$sustrato['nombre']}}</option>
                                         @endforeach
@@ -93,7 +93,7 @@
                                 <label for="id_dimension" class="col-md-4 col-form-label text-md-end">{{ __('Elige una dimensión para tu mesa') }}</label>
 
                                 <div class="col-md-6">
-                                    <select id="id_dimension" class="form-control @error('id_dimension') is-invalid @enderror" name="id_dimension">
+                                    <select id="id_dimension" class="form-control @error('id_dimension') is-invalid @enderror" name="id_dimension" required>
                                         @foreach($dimensiones as $dimensione)
                                             <option value="{{$dimensione['id_dimension']}}">{{$dimensione['altura']}} X {{$dimensione['ancho']}} X {{$dimensione['largo']}} CM</option>
                                         @endforeach
@@ -110,7 +110,7 @@
                                 <label for="imagen" class="col-md-4 col-form-label text-md-end">{{ __('Elige una imagen para tu mesa') }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="file" id="imagen" name="imagen" class="form-control" />
+                                    <input type="file" id="imagen" name="imagen" class="form-control" required />
                                 </div>
                             </div>
 

@@ -82,12 +82,13 @@
             <li  >
                 <h1 id="nombre">Anotaciones del cultivo</h1>
             </li>
+            {{--
             <li >
                 <button id="Anotarobservaciones" ><a id="observaciones2" href="{{url("anotaciones")}}" style="text-decoration: none">Anotar observaciones</a></button>
             </li>
             <li>
                 <button id="volver" ><a id="volver2" href="{{url("bitacoras")}}" style="text-decoration: none">Volver</a></button>
-            </li>
+            </li>--}}
         </ul>
     </div>
 </nav>
@@ -101,7 +102,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{url("anotaciones")}}" method="post">
+                    <form action="{{url("anotaciones/".$id_mesa_siembra)}}" method="post">
                         @csrf
                         <div class="row mb-3">
                             <label for="crecimiento" class="col-form-label text-md-start">{{ __('Crecimiento') }}</label>
@@ -120,23 +121,26 @@
                         <div class="row mb-3">
                             <label for="fecha_seguimiento" class="col-form-label text-md-start">{{ __('Fecha de seguimiento') }}</label>
                             <div class="col-md-6">
-                                <input id="fecha_seguimiento" type="date" class="form-control " name="fecha_seguimiento" value="{{$fechaactual->format('Y-m-d')}}" readonly>
+                                <input id="fecha_seguimiento" type="date" class="form-control " name="fecha_seguimiento" {{--value="{{$fechaactual->format('Y-m-d')}}" readonly--}}>
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-warning">
+                                {{--<button type="submit" class="btn btn-warning">
                                     <a style="text-decoration: none; color: black">Guardar observaciones</a>
+                                </button>--}}
+                                <button type="submit" class="btn btn-success" >
+                                    {{ __('Guardar observaciones') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-danger">
-                                    <a id="regresarbita" href="{{url("bitacoras")}}" style="text-decoration: none; color: black">Cancelar</a>
-                                </button>
+                                {{---<button type="submit" class="btn btn-danger">
+                                    <a id="regresarbita" href="{{url("bitacoras/".$id_mesa_siembra)}}" style="text-decoration: none; color: black">Cancelar</a>
+                                </button>--}}
                             </div>
                         </div>
                 </div>
@@ -151,15 +155,16 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0 " id="barra">
     <div class="container-fluid" id="navbarNavD2">
         <ul class="navbar-nav">
-            <li  >
+            <li>
                 <h1 id="nombre">Anotaciones del cultivo {{$bitacora->nombre}}</h1>
             </li>
+            {{--
             <li >
                 <button id="Anotarobservaciones" ><a id="observaciones2" href="{{url("anotaciones")}}" style="text-decoration: none">Anotar observaciones</a></button>
             </li>
             <li>
                 <button id="volver" ><a id="volver2" href="{{url("bitacoras")}}" style="text-decoration: none">Volver</a></button>
-            </li>
+            </li>--}}
         </ul>
     </div>
 </nav>
@@ -173,9 +178,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <form id="formuagmes" action="{{url("anotaciones",$bitacora->id_bitacora)}}" method="POST" >
-                        @csrf
-                        @method("PUT")
+                   <form action="{{route("anotaciones.update",[$id_mesa_siembra,$bitacora->id_bitacora])}}" method="POST">
+                     @csrf
+                     <div class="container">
+                       @method("PUT")
                         <div class="row mb-3">
                             <label for="crecimiento" class="col-form-label text-md-start">{{ __('Crecimiento') }}</label>
                             <div class="col-md-6">
@@ -199,18 +205,18 @@
 
                         <div class="row mb-0">
                             <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
-                                <button type="submit" class="btn btn-warning" style="text-decoration: none; color: black">Guardar observaciones</button>
+                                <button type="submit" class="btn btn-warning" style="text-decoration: none; color: black">Actualizar observaciones</button>
                             </div>
                         </div>
-
-                    </form>
-                    <div class="row mb-0">
+                    </div>
+                   </form>
+                    {{--<div class="row mb-0">
                         <div class="col-md-8 offset-md-4">
                             <button type="submit" class="btn btn-danger">
-                                <a id="regresarbita" href="{{url("bitacoras")}}" style="text-decoration: none; color: black">Cancelar</a>
+                                <a id="regresarbita" href="{{url("bitacoras","$bitacora->id_bitacora")}}" style="text-decoration: none; color: black">Cancelar</a>
                             </button>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         </div>

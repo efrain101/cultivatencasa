@@ -101,7 +101,7 @@
                 <td>
                     <table >
                         <tr>
-                            <th>Complementos</th>
+                            <th>Complemento</th>
                             @if(Auth::user()->tipo_usuario==1)
                             <th>Opciones</th>
                             @endif

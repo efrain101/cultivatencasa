@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Estados;
-use App\Models\Municipios;
-use App\Models\Localidades;
+use App\Models\Estado;
+use App\Models\Municipio;
+use App\Models\Localidad;
 use Symfony\Component\Console\Input\Input;
 
 class RegisterController extends Controller
@@ -39,7 +39,7 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         //solo se compacta el modelo de estados ya que es el primero que se muestra y con base en ello se muestran los demas datos
-        $estados=Estados::all();
+        $estados=Estado::all();
         return view('auth.register',compact('estados'));
     }
 
@@ -49,7 +49,7 @@ class RegisterController extends Controller
     {
         if(isset($request->texto))
         {
-            $municipios = Municipios::whereid_estado($request->texto)->get();
+            $municipios = Municipio::whereid_estado($request->texto)->get();
             return response()->json(
                 [
                     'lista' => $municipios,
@@ -73,7 +73,7 @@ class RegisterController extends Controller
     {
         if(isset($request->texto))
         {
-            $localidades = Localidades::whereid_municipio($request->texto)->get();
+            $localidades = Localidad::whereid_municipio($request->texto)->get();
             return response()->json(
                 [
                     'lista' => $localidades,

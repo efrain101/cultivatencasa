@@ -36,7 +36,7 @@
     </head>
 
     <div>
-        <h1 id="tituloefectospla" style="text-align: center" ><MARQUEE BEHAVIOR="ALTERNATE">Editar efecto "{{$efectos_plagas_c->efecto}}" </MARQUEE></h1>
+        <h1 id="tituloefectospla" style="text-align: center" ><MARQUEE BEHAVIOR="ALTERNATE">Editar efecto </MARQUEE></h1>
     </div>
 
     <div class="container">
@@ -51,9 +51,9 @@
                         </div>
                     </div>
 
-                    <div class="col-4" style="font-family: 'Arial Black'">
+                    <div  style="font-family: 'Arial Black'">
                         <input type="text"  name="efecto" class="form-control" placeholder="efecto" value="{{$efectos_plagas_c->efecto}}">
-                        <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em">
+                        <div class="d-grid gap-2 d-md-flex" style="justify-content: center; margin-top: 2em; margin-bottom: 2em; width: 100%; height: 30%">
                             <button type="submit" class="btn btn-info" style="color: darkblue;font-family: 'Apple'"><b>Actualizar</b></button>
                         </div>
                     </div>

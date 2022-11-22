@@ -94,7 +94,7 @@
                 <td>
                     <table >
                         <tr>
-                            <th>Plagas</th>
+                            <th>Plaga</th>
                             @if(Auth::user()->tipo_usuario==1)
                             <th>Opciones</th>
                             @endif
